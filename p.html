@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        header{
+            background-color:tomato;
+            margin-top: -2%;
+            margin-left: -1%;
+            margin-right: -1%;
+        }
+        #a{
+            background-color: yellowgreen;
+        }
+        .ii{
+            background-color: white;
+        }
+        
+        .ee{
+            background-color: hotpink;
+            margin-right: 0%;
+            margin-left: 0%;
+            width: auto;
+            text-align: center;
+        }
+        .d{
+            background-color: khaki;
+            width: 100%;
+            text-align: center;
+        }
+        .m{
+            background-color:whitesmoke;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <br>
+        <center><h1>KIET GROUPE OF INSISTUTION</h1></center>
+        <h2><center>SEMESTER GRADE POINT AVERAGE(SGPA)</center></h2>
+        <br>
+    </header>
+    <div class="d">
+        <h2>Grade Equalience Points</h2>
+        <ul>
+            <button >A+ = 10</button>&nbsp;&nbsp;<button>A = 9</button>&nbsp;&nbsp;<button>B = 8</button>&nbsp;&nbsp;<button>C = 7</button>&nbsp;&nbsp;<button>D = 6</button>&nbsp;&nbsp;<button>E = 5</button>&nbsp;&nbsp;<button>F = 0</button>
+        </ul>
+    </div>
+    
+    <div class="m">
+        <br>
+        <label for="m-3" >M-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</label><input class="ii" type="number" id="m-3">
+        <br>
+        <br>
+        <label for="mfcs" >MFCS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</label><input type="number" id="mfcs">
+        <br>
+        <br>
+        <label for="aids" >AIDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</label><input type="number" id="aids">
+        <br>
+        <br>
+        <label for="java" >JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</label><input type="number" id="java">
+        <br><br>
+        <label for="dbms" >DBMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</label><input type="number" id="dbms">
+        <br>
+        <br>
+        <label for="java-lab" >JAVA-LAB::</label><input type="number" id="java-lab">
+        <br>
+        <br>
+        <label for="dbms-lab" >DBMS-LAB::</label><input type="number" id="dbms-lab">
+        <br>
+        <br>
+        <label for="aids-lab" >AIDS-LAB::</label><input type="number" id="aids-lab">
+        <br>
+        <br>
+        <label for="mad" >MAD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</label><input type="number" id="mad">
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="a" type="button" onclick="calculateTotal()"><h3><b id="a">SUBMIT</b></h3></button>
+    </div>
+    <div class="ee">
+        <h1><p id="result"></p></h1>
+    </div>
+
+    <script>
+        function calculateTotal(){
+            var a=parseInt(document.getElementById("m-3").value)|| 0;
+            var b=parseInt(document.getElementById("mfcs").value)|| 0;
+            var b=parseInt(document.getElementById("mfcs").value)|| 0;
+            var b=parseInt(document.getElementById("mfcs").value)|| 0;
+            var c=parseInt(document.getElementById("aids").value)|| 0;
+            var d=parseInt(document.getElementById("java").value)|| 0;
+            var e=parseInt(document.getElementById("dbms").value)|| 0;
+            var f=parseInt(document.getElementById("java-lab").value)|| 0;
+            var g=parseInt(document.getElementById("aids-lab").value)|| 0;
+            var h=parseInt(document.getElementById("dbms-lab").value)|| 0;
+            var i=parseInt(document.getElementById("mad").value)|| 0;
+            var ll=(((a+b+c+d+e)*3)+((f+g+h)*1.5)+(i*2))/21.5;
+            document.getElementById("result").innerText = "Total SGPA: " + ll;
+        }
+    </script>
+</body>
+</html>
